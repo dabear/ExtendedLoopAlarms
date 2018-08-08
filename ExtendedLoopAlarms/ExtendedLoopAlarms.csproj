@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+   <PropertyGroup>
+  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  <NoWarn>$(NoWarn);1591</NoWarn>
+</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Api\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\About.cshtml" />
+    <Content Remove="Pages\Contact.cshtml" />
+    <Content Remove="Pages\Privacy.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\About.cshtml.cs" />
+    <Compile Remove="Pages\Contact.cshtml.cs" />
+    <Compile Remove="Pages\Privacy.cshtml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\mockedshareserver - Web Deploy.pubxml" />
+  </ItemGroup>
+</Project>
